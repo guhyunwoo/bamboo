@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: bamboo
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USER}
+    name: ${DB_NAME}
+    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}?charSet=UTF-8
