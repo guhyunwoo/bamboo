@@ -36,7 +36,7 @@ public class OAuth2AuthFacade {
         User user = userRepository.findByEmail(email)
                 .orElseGet(() -> createUser(oAuthUserInfo));
 
-        return tokenProvider.generateTokenHandle(user.getUserId(), user.getRole());
+        return tokenProvider.generateTokenHandle(user.getId(), user.getRole());
     }
 
     private User createUser(OAuthUserInfo oAuthUserInfo) {
