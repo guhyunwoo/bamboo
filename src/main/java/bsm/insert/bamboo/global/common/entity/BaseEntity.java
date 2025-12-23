@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @EntityListeners(AuditingEntityListener.class)
 public class BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @CreatedDate
